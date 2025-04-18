@@ -24,11 +24,7 @@ namespace ContactsManager
         internal static List<Contact> ReadFromFile()
         {
             List<Contact> contacts = new List<Contact>();
-            if (!File.Exists("file.csv"))
-            {
-                
-                File.Create("file.csv").Close(); 
-            }
+            
             using (StreamReader sr = new StreamReader("file.csv"))
             {
                 string line;
